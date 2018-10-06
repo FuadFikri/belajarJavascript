@@ -19,6 +19,8 @@
     <img src="man-3.png" alt="" onclick="berubah()" id="img" class="black">
     <br>
     <input type="text" name="" id="input">
+    <input type="submit" value="submit" id="submit">
+    Namanya adalah <span id="span"> </span>
 
     <script>
         var img = document.getElementById('img');
@@ -51,8 +53,14 @@ input.addEventListener("mouseenter", function(){
 input.addEventListener("mouseleave", function () {
     input.style.backgroundColor = "grey";
 });
- 
 
+submit = document.getElementById('submit');
+span = document.getElementById('span');
+ 
+submit.onclick = function(){
+    var text = input.value;
+    span.innerHTML = text;
+};
 
         
     </script>
