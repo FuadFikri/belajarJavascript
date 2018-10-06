@@ -14,9 +14,9 @@
     }
     </style>
 </head>
-<body>
+<body onload="alert('sudah selesei di load')">
     <h1>Belajar DOM</h1>
-    <img src="man-3.png" alt="" id="img" class="black">
+    <img src="man-3.png" alt="" onclick="berubah()" id="img" class="black">
     <br>
     <input type="text" name="" id="input">
 
@@ -30,7 +30,28 @@
         input.value = "FIkri";
         // mengubah css di javascript
         input.style.border= '3px solid blue';
-        
+ // ==============event==========================
+    // cara 1
+ function berubah(){
+     img.style.backgroundColor="blue";
+ }
+ function berubah2() {
+        input.style.backgroundColor = "green";
+}
+    // cara 2
+// input.onclick = function(){
+//     berubah();
+// };
+
+    // cara 3
+input.addEventListener("mouseenter", function(){
+    berubah2()
+});
+
+input.addEventListener("mouseleave", function () {
+    input.style.backgroundColor = "grey";
+});
+ 
 
 
         
