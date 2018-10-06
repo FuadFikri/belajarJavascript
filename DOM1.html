@@ -19,6 +19,7 @@
         <li>HTML</li>
         <li>CSS</li>
         <li>Javascript</li>
+        <div></div>
     </ul>
 
     <script>
@@ -32,6 +33,11 @@
         document.getElementsByTagName('li')[0].innerHTML = "konten";
         var list = document.getElementsByTagName('li');
         list[1].innerHTML="PHP";
+
+        // selektor all
+        document.querySelectorAll('#box')[0].innerHTML = "halo";
+        document.querySelectorAll('.boxes')[2].innerHTML = "class";
+        document.querySelectorAll('ul div')[0].innerHTML = "tag";
     </script>
 </body>
 </html>
