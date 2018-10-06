@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>atributt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .merah{
+        background: red;
+    }
+    .black{
+        border: 2px solid black;
+    }
+    </style>
+</head>
+<body>
+    <h1>Belajar DOM</h1>
+    <img src="man-3.png" alt="" id="img" class="black">
+    <br>
+    <input type="text" name="" id="input">
+
+    <script>
+        var img = document.getElementById('img');
+        img.width=300;
+        // img.setAttribute('class', 'merah')
+        img.className += ' merah';
+
+        var input = document.getElementById('input');
+        input.value = "FIkri";
+        // mengubah css di javascript
+        input.style.border= '3px solid blue';
+        
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Objek</h1>
+    Nama <span id="nama"></span>
+    umur <span id="umur"></span>
+    keahlian <span id="keahlian"></span>
+    <br>
+
+    Nama : <span id="name"></span><br>
+    skill : <span id="skill"></span>
+    <br><hr>
+
+    <h2>player</h2>
+    <div id="box"></div>
+    <br><hr>
+    <div id="boxes"></div>
+    <script>
+
+    // membuat objek cara 1
+    var programmer = {
+        nama : "FIkri",
+        umur :  19,
+        keahlian : "programming"
+    };
+
+    // buat objek cara 2
+    // var designer = new Object();
+    // designer.name = "Fuad";
+    // designer.skill = "photoshop"
+
+    document.getElementById('nama').innerHTML = programmer.nama;
+    document.getElementById('umur').innerHTML = programmer.umur;
+    document.getElementById('keahlian').innerHTML = programmer.keahlian ;
+
+
+    // document.getElementById('name').innerHTML = designer.name;
+    // document.getElementById('skill').innerHTML = designer["skill"];
+
+
+    var player = {
+        name : "Ronaldo",
+        pass : 89,
+        speed : 98,
+        getData : function(){
+            return "name :" + this.name + "<br> speed :" + this.speed;
+        },
+        setData : function(name){
+            this.name = name;
+        }
+    }
+    
+    player.setData("JOko");
+    document.getElementById('box').innerHTML = player.getData();
+
+    // -----------------------------
+    // objek prototype
+    function pemain_bola( klub, negara ){
+        this.klub = klub;
+        this.negara = negara;
+    }
+    var madrid = new pemain_bola("REal madrid", "Portugal");
+
+    document.getElementById('boxes').innerHTML = madrid.negara;
+    </script>
+</body>
+</html>
